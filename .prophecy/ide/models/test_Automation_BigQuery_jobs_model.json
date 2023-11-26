@@ -1,0 +1,169 @@
+{
+  "id" : "test_Automation_BigQuery_jobs_model",
+  "metainfo" : {
+    "label" : "test_Automation_BigQuery_jobs_model",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 0
+  },
+  "processes" : {
+    "test_Automation_BigQuery_jobs_model##a7Haoz65" : {
+      "id" : "test_Automation_BigQuery_jobs_model##a7Haoz65",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "test_Automation_BigQuery_jobs_model",
+        "x" : 120,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM zz_qa_test_seed_job_BigQuery_1701025611438\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "oPXAGUS3",
+          "schema" : {
+            "providerType" : "BigQuery",
+            "fields" : [ {
+              "name" : "c_int64",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "c_bignumeric",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "c_string",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_float64",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "c_bool",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "zz_qa_test_seed_job_BigQuery_1701025611438"
+        } ],
+        "outputs" : [ {
+          "id" : "ZkkrVxW0",
+          "schema" : {
+            "providerType" : "BigQuery",
+            "fields" : [ {
+              "name" : "c_int64",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "c_bignumeric",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "c_string",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_float64",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "c_bool",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "_ngYJrKMVM46yd0rvqVFN" : {
+      "id" : "_ngYJrKMVM46yd0rvqVFN",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "zz_qa_test_seed_job_BigQuery_1701025611438",
+        "slug" : "zz_qa_test_seed_job_BigQuery_1701025611438",
+        "x" : -291.6000061035156,
+        "y" : -54.400001525878906,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "zz_qa_test_seed_job_BigQuery_1701025611438",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "ocVDecywJbnHoHk06uQWf",
+          "schema" : {
+            "providerType" : "BigQuery",
+            "fields" : [ {
+              "name" : "c_int64",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "c_bignumeric",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "c_string",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_float64",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "c_bool",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "IZC36m18q1Ym5CQEPBXnN",
+    "source" : "_ngYJrKMVM46yd0rvqVFN",
+    "sourcePort" : "ocVDecywJbnHoHk06uQWf",
+    "target" : "test_Automation_BigQuery_jobs_model##a7Haoz65",
+    "targetPort" : "oPXAGUS3"
+  } ],
+  "component" : "Model"
+}

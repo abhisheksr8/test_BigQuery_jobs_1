@@ -1,0 +1,167 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "25",
+    "jobId" : "jobs/BigQuery-SQLAirflow-MWAA-Automation",
+    "name" : "BigQuery-SQLAirflow-MWAA-Automation",
+    "dagName" : "staging_abhisheks_e2etests_BigQuery_AutomationJobs_Project_BigQuery_SQLAirflow_MWAA_Automation",
+    "schedule" : "0 0 17 2 *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "availableFabrics" : [ {
+      "id" : "22",
+      "name" : "dev_airflow_prophecy_managed",
+      "trialStartDate" : 1695736560346
+    }, {
+      "id" : "24",
+      "name" : "dev_airflow"
+    }, {
+      "id" : "25",
+      "name" : "dev_airflow_mwaa"
+    } ],
+    "catchup" : true,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ]
+  },
+  "processes" : {
+    "rKyQ1KtXTX5z1usQXknyP$$DpN-qwTJIYSRMDKkJz3nF" : {
+      "id" : "rKyQ1KtXTX5z1usQXknyP$$DpN-qwTJIYSRMDKkJz3nF",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0",
+        "slug" : "DBT_0",
+        "x" : -460,
+        "y" : -200
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "kyDmxBbVmEIWizIb0NRqv$$pt1rIHioFRGIkhcuHTRl5",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "ivgZt2PAk9nG53kGZnuMZ$$Yv0fo0Se1qltV5f3Ez8t7",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "retries" : 1,
+        "retry_delay" : 1
+      },
+      "properties" : {
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "3792",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "runTest" : false,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : true,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : false,
+        "printerWidth" : null,
+        "sqlFabricId" : "5",
+        "gitEntityValue" : "testBranchBigQueryJobs",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "models" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : true,
+        "noAnonymousUsageStats" : true,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "test_Automation_BigQuery_jobs_model",
+          "value" : "test_Automation_BigQuery_jobs_model",
+          "id" : "3792/.prophecy/metadata/sqlmodels/test_Automation_BigQuery_jobs_model",
+          "name" : "test_Automation_BigQuery_jobs_model"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "qpmxCeC-RZfvxgk9j3dQB$$lEgxpfK1koX5RTtaF_4ZA" : {
+      "id" : "qpmxCeC-RZfvxgk9j3dQB$$lEgxpfK1koX5RTtaF_4ZA",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : -320,
+        "y" : -200
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SnJAyZr1lNihU3UUp410g$$4SP0ST6CRribdLxDH6ZDt",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "kL3BR9tOLqFDitqnoubgo$$ej7JjckyK8OfGLJZ9Y31B",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "code" : "ls -ltr\n",
+        "language" : "bash",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "-mzeVmsuJEH-YUtZhmCAX",
+    "source" : "rKyQ1KtXTX5z1usQXknyP$$DpN-qwTJIYSRMDKkJz3nF",
+    "target" : "qpmxCeC-RZfvxgk9j3dQB$$lEgxpfK1koX5RTtaF_4ZA",
+    "sourcePort" : "ivgZt2PAk9nG53kGZnuMZ$$Yv0fo0Se1qltV5f3Ez8t7",
+    "targetPort" : "SnJAyZr1lNihU3UUp410g$$4SP0ST6CRribdLxDH6ZDt"
+  } ]
+}
